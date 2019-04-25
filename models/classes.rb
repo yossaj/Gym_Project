@@ -2,7 +2,8 @@ require_relative('../db/sql_runner.rb')
 
 class FitClass
 
-  attr_reader :type, :time, :id
+  attr_reader  :id
+  attr_accessor :type, :time
 
   def initialize(options)
     @id = options['id'].to_i
@@ -18,7 +19,16 @@ def save
   @id = result.first['id']
 end
 
-def self.delete_all
+
+
+def update()
+ sql = "UPDATE classes SET (type, time) = ($1, $2)
+        WHERE id = $3;"
+ values = [@type, @time, @id]
+ SqlRunner.run(sql, values)
+end
+
+def self.delete_all()
   sql = "DELETE FROM classes"
   SqlRunner.run(sql)
 end

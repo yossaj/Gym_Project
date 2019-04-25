@@ -2,7 +2,8 @@ require_relative('../db/sql_runner.rb')
 
 class Member
 
-  attr_reader :name, :membership_type, :reg_date, :id
+  attr_reader  :id, :reg_date
+  attr_accessor :name, :membership_type
 
   def initialize(options)
     @id = options['id'].to_i
@@ -17,6 +18,13 @@ class Member
     values = [@name, @membership_type, @reg_date]
     result = SqlRunner.run(sql, values)
     @id = result.first['id']
+  end
+
+  def update()
+   sql = "UPDATE members SET (name, membership_type, registration_date) = ($1, $2, $3)
+          WHERE id = $4;"
+   values = [@name, @membership_type, @reg_date, @id]
+   SqlRunner.run(sql, values)
   end
 
   def self.delete_all
