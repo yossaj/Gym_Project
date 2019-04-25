@@ -18,4 +18,9 @@ def save
   @id = result.first['id']
 end
 
+def self.delete_all
+  sql = "DELETE FROM classes"
+  SqlRunner.run(sql)
+end
+
 end

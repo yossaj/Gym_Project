@@ -3,6 +3,10 @@ require_relative( '../models/members' )
 require_relative( '../models/bookings' )
 
 
+Booking.delete_all
+FitClass.delete_all
+Member.delete_all
+
 class1 = FitClass.new('type'=>'Tabata', 'time'=> '12:40')
 class1.save
 
