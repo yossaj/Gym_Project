@@ -32,6 +32,13 @@ class Member
     SqlRunner.run(sql)
   end
 
+  def self.all()
+    sql = 'SELECT * FROM members'
+    results = SqlRunner.run(sql)
+    all_mems = results.map{|member| Member.new(member)}
+    all_mems
+  end
+
 
 
 end

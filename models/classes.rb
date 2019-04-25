@@ -33,4 +33,11 @@ def self.delete_all()
   SqlRunner.run(sql)
 end
 
+def self.all()
+  sql = 'SELECT * FROM classes'
+  results = SqlRunner.run(sql)
+  all_classes = results.map{|fit_class| FitClass.new(fit_class)}
+  all_classes
+end
+
 end

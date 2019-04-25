@@ -23,6 +23,12 @@ class Booking
     SqlRunner.run(sql)
   end
 
+  def self.all()
+    sql = 'SELECT * FROM bookings'
+    results = SqlRunner.run(sql)
+    all_bookings = results.map{|booking| Booking.new(booking)}
+    all_bookings
+  end
 
 
 end
