@@ -1,14 +1,21 @@
-require_relative('./db/sql_runner.rb')
+require_relative('../db/sql_runner.rb')
 
-class Class
+class FitClass
 
   attr_reader :type, :time, :id
 
-  def initalize(options)
-    @id = opttions['id'].to_i
+  def initialize(options)
+    @id = options['id'].to_i
     @type = options['type']
     @time = options['time']
   end
 
+def save
+  sql = "INSERT INTO classes( type, time )
+        VALUES ($1, $2) RETURNING id"
+  values = [@type, @time]
+  result = SqlRunner.run(sql, values)
+  id = result.first['id'].to_i
+end
 
 end
