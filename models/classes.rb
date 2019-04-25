@@ -15,7 +15,7 @@ def save
         VALUES ($1, $2) RETURNING id"
   values = [@type, @time]
   result = SqlRunner.run(sql, values)
-  id = result.first['id'].to_i
+  @id = result.first['id']
 end
 
 end
