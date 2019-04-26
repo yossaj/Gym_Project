@@ -40,6 +40,20 @@ class Member
     member = result.map{|member| Member.new(member)}
   end
 
+  def self.find_by_name(name)
+    sql = "SELECT * FROM members WHERE name = $1"
+    values = [name]
+    result = SqlRunner.run(sql,values)
+    member = result.map{|member| Member.new(member)}
+  end
+
+  def self.find_by_membership_type(membership_type)
+    sql = "SELECT * FROM members WHERE membership_type = $1"
+    values = [membership_type]
+    result = SqlRunner.run(sql,values)
+    member = result.map{|member| Member.new(member)}
+  end
+
 
   def self.delete_all
     sql = "DELETE FROM members"
