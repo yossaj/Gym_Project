@@ -32,6 +32,13 @@ def update()
  SqlRunner.run(sql, values)
 end
 
+def self.find(id)
+  sql = 'SELECT * FROM classes WHERE id = $1'
+  values = [id]
+  result = SqlRunner.run(sql,values)
+  fitclass = result.map{|fclass| FitClass.new(fclass)}
+end
+
 def self.delete_all()
   sql = "DELETE FROM classes"
   SqlRunner.run(sql)
