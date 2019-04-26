@@ -1,2 +1,4 @@
-1.fix registration date problem
+1.fix registration date problem X done
+
+
 2. add delete and update buttons

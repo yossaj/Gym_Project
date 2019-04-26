@@ -1,4 +1,5 @@
 require_relative('../db/sql_runner.rb')
+require('pry')
 
 class FitClass
 
@@ -32,11 +33,11 @@ def update()
  SqlRunner.run(sql, values)
 end
 
-def self.find(id)
+def self.find(fclass)
   sql = 'SELECT * FROM classes WHERE id = $1'
-  values = [id]
-  result = SqlRunner.run(sql,values)
-  fitclass = result.map{|fclass| FitClass.new(fclass)}
+  values = [fclass]
+  result = SqlRunner.run(sql,values).first
+  ask_class = FitClass.new(result)
 end
 
 def self.find_by_type(type)

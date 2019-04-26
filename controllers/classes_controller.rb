@@ -20,3 +20,15 @@ post '/classes' do
   FitClass.new(params).save
   redirect to '/classes'
 end
+
+
+get '/classes/:id' do
+  @class = FitClass.find(params['id'])
+  erb(:'classes/show')
+end
+
+post '/classes/:id/delete' do
+  fclass = FitClass.find(params['id'])
+  fclass.delete()
+  redirect to '/classes'
+end

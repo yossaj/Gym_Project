@@ -43,9 +43,9 @@ member1.update()
 # FitClass.all()
 # Booking.all()
 
- Member.find(member2.id)
-# FitClass.find(class2.id)
-# Booking.find(booking1.id)
+ # Member.find(member2.id)
+p FitClass.find(class2.id)
+ # Booking.find(booking1.id)
 #
 #  Member.find_by_name('Sean')
 #

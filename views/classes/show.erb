@@ -1,0 +1,5 @@
+<h2>Class: <%= @class.type %></h2>
+
+<h2>Time: <%= @class.time %></h2>
+
+<form action="/classes/<%= @class.id %>/delete" method="POST"><input type="submit" value="Delete"></form>

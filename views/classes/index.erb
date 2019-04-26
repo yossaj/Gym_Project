@@ -2,6 +2,6 @@
 
 <% @classes.each do |fclass| %>
 
-<p>Class: <%=fclass.type%></p>
+<p>Class: <a href="/classes/<%= fclass.id %>"> <%=fclass.type%></a></p>
 
 <% end %>
