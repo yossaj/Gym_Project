@@ -1,28 +1,33 @@
 *{
   margin:0px;
   padding: 0px;
-};
+}
 
 body{
   background-color: lightgray;
-};
+  margin: 10px;
+}
 
 h1{
   margin: 10px;
-};
+}
 
 nav{
+  margin: 10px;
+}
+
+li{
   display: inline-block;
   margin: 10px;
-};
+}
 
 
 p{
   margin: 10px;
-  padding: 10px;
-};
+  padding: 5px;
+}
 
 a{
-  style: none;
-  color: red;
+  text-decoration: none;
+
 }
