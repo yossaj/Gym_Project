@@ -14,11 +14,11 @@ class2.save
 class3 = FitClass.new({'type'=>'Boxercise', 'time'=> '17:30'})
 class3.save
 
-member1 = Member.new({'name'=>'Billy', 'membership_type'=> 'Standard', 'reg_date'=>'11-08-2009'} )
+member1 = Member.new({'name'=>'Billy', 'membership_type'=> 'Standard', 'registration_date'=>'11-08-2009'} )
 member1.save()
-member2 = Member.new({'name'=>'Jess', 'membership_type'=> 'Standard', 'reg_date'=>'11-08-2011'} )
+member2 = Member.new({'name'=>'Jess', 'membership_type'=> 'Standard', 'registration_date'=>'11-08-2011'} )
 member2.save()
-member3 = Member.new({'name'=>'Sean', 'membership_type'=> 'Standard', 'reg_date'=>'20-11-2016'} )
+member3 = Member.new({'name'=>'Sean', 'membership_type'=> 'Standard', 'registration_date'=>'20-11-2016'} )
 member3.save()
 
 booking1 = Booking.new({'class_id'=>class1.id, 'member_id'=> member1.id})
@@ -43,7 +43,7 @@ member1.update()
 # FitClass.all()
 # Booking.all()
 
-p Member.find(member2.id)
+ Member.find(member2.id)
 # FitClass.find(class2.id)
 # Booking.find(booking1.id)
 #
