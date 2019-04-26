@@ -3,10 +3,26 @@
   padding: 0px;
 };
 
+body{
+  background-color: lightgray;
+};
+
 h1{
   margin: 10px;
-}
+};
 
 nav{
+  display: inline-block;
   margin: 10px;
+};
+
+
+p{
+  margin: 10px;
+  padding: 10px;
+};
+
+a{
+  style: none;
+  color: red;
 }
