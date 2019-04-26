@@ -43,5 +43,14 @@ class Booking
     all_bookings
   end
 
+  def self.show_all_by_name()
+    sql = "SELECT classes.*, members.*
+          FROM members INNER JOIN bookings
+          ON members.id = bookings.member_id
+          INNER JOIN classes ON classes.id = bookings.class_id "
+    results = SqlRunner.run(sql)
+    all_bookings = results.map
+  end
+
 
 end

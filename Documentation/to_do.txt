@@ -1,4 +1,7 @@
 1.fix registration date problem X done
+2. add delete and update buttons X done
 
-
-2. add delete and update buttons
+3.write function which for bookings which shows who has booked which class.
+4. implement the function on site
+5. implement function showing which members have registered for which classes.
+6.write a method to show up coming classes
