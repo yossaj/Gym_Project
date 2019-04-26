@@ -9,6 +9,10 @@ Member.delete_all
 
 class1 = FitClass.new({'type'=>'Tabata', 'time'=> '12:40'})
 class1.save
+class2 = FitClass.new({'type'=>'Tabata', 'time'=> '15:00'})
+class2.save
+class3 = FitClass.new({'type'=>'Boxercise', 'time'=> '17:30'})
+class3.save
 
 member1 = Member.new({'name'=>'Billy', 'membership_type'=> 'Standard', 'reg_date'=>'11-08-2009'} )
 member1.save()
@@ -24,8 +28,11 @@ class1.type = 'salsa'
 class1.update()
 
 member1.name = 'Jim'
-member1.update
+member1.update()
 
-Member.all()
-FitClass.all()
-p Booking.all()
+class1.delete()
+member1.delete()
+booking1.delete( )
+# Member.all()
+# FitClass.all()
+# Booking.all()

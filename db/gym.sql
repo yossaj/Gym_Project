@@ -18,6 +18,6 @@ CREATE TABLE classes(
 
 CREATE TABLE bookings(
   id SERIAL8 PRIMARY KEY,
-  class_id SERIAL8 REFERENCES classes(id),
-  member_id SERIAL8 REFERENCES members(id)
+  class_id SERIAL8 REFERENCES classes(id) ON DELETE CASCADE,
+  member_id SERIAL8 REFERENCES members(id) ON DELETE CASCADE
 );

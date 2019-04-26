@@ -19,7 +19,11 @@ def save
   @id = result.first['id']
 end
 
-
+def delete()
+  sql = "DELETE FROM classes WHERE id = $1"
+  values = [@id]
+  SqlRunner.run(sql,values)
+end
 
 def update()
  sql = "UPDATE classes SET (type, time) = ($1, $2)
