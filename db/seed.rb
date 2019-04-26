@@ -43,10 +43,13 @@ member1.update()
 # FitClass.all()
 # Booking.all()
 
- Member.find(member2.id)
-FitClass.find(class2.id)
-Booking.find(booking1.id)
+# Member.find(member2.id)
+# FitClass.find(class2.id)
+# Booking.find(booking1.id)
+#
+#  Member.find_by_name('Sean')
+#
+#  Member.find_by_membership_type('Standard')
+#  FitClass.find_by_type('Tabata')
 
- Member.find_by_name('Sean')
-
- Member.find_by_membership_type('Standard')
+p class3.who_registered_for_class
