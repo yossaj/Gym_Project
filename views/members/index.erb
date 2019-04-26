@@ -2,7 +2,7 @@
 
 <% @members.each do |member| %>
 
-<p>Name: <%=member.name%></p>
+<p><a href="/members/<%= member.id %>"> Name: <%=member.name%></a></p>
 
 
 <% end %>

@@ -43,7 +43,7 @@ member1.update()
 # FitClass.all()
 # Booking.all()
 
-# Member.find(member2.id)
+p Member.find(member2.id)
 # FitClass.find(class2.id)
 # Booking.find(booking1.id)
 #
@@ -52,4 +52,4 @@ member1.update()
 #  Member.find_by_membership_type('Standard')
 #  FitClass.find_by_type('Tabata')
 
-p class3.who_registered_for_class
+# class3.who_registered_for_class

@@ -1,0 +1,2 @@
+1.fix registration date problem
+2. add delete and update buttons
