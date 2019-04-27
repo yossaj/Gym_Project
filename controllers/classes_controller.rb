@@ -27,6 +27,8 @@ get '/classes/:id' do
   erb(:'classes/show')
 end
 
+
+
 get '/classes/:id/edit' do
   @fclass = FitClass.find(params['id'])
 erb(:'classes/edit')
