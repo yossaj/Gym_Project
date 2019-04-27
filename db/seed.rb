@@ -36,6 +36,9 @@ class1.update()
 member1.name = 'Jim'
 member1.update()
 
+member1.registration_date = '19-02-2000'
+member1.update
+
 # class1.delete()
 # member1.delete()
 # booking1.delete( )
@@ -43,7 +46,7 @@ member1.update()
 # FitClass.all()
 # Booking.all()
 
- # Member.find(member2.id)
+ p Member.find(member1.id)
 # p FitClass.find(class2.id)
  # Booking.find(booking1.id)
  # Booking.show_all_by_name
