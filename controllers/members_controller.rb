@@ -26,6 +26,18 @@ get '/members/:id' do
   erb(:'members/show')
 end
 
+get '/members/:id/edit' do
+  @member = Member.find(params['id'])
+erb(:'members/edit')
+end
+
+post '/members/:id' do
+  member = Member.new(params)
+  member.update
+  redirect to '/members'
+end
+
+
 post '/members/:id/delete' do
   member = Member.find(params['id'])
   member.delete()
