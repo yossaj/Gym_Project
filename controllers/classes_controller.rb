@@ -27,11 +27,23 @@ get '/classes/:id' do
   erb(:'classes/show')
 end
 
+get '/classes/:id/edit' do
+  @fclass = FitClass.find(params['id'])
+erb(:'classes/edit')
+end
+
+post '/classes/:id' do
+  fclass = FitClass.new(params)
+  fclass.update
+  redirect to '/classes'
+end
+
 post '/classes/:id/delete' do
   fclass = FitClass.find(params['id'])
   fclass.delete()
   redirect to '/classes'
 end
+
 
 get '/classes/:id/add-member' do
   @members = Member.all()
