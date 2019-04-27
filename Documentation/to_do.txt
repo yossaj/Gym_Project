@@ -7,6 +7,9 @@
 7. fix registration problem (AGAIN). X done
 8. implement function showing which members have registered for which classes. x Done
 9. fix classes null problem X done
+10.write a method to show up coming classes x Done
 
 
-10.write a method to show up coming classes
+11. improve spacing with css
+12. layout ideas for additional functionality
+13. 
