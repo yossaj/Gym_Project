@@ -53,7 +53,7 @@ get '/classes/:id/add-member' do
 erb(:'classes/add')
 end
 
-post '/classes/:id' do
+post '/bookings' do
   Booking.new(params).save
   redirect to '/classes'
 end
