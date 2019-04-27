@@ -1,7 +1,10 @@
 1.fix registration date problem X done
 2. add delete and update buttons X done
+3.write function which for bookings which shows who has booked which class. X done
+4. implement the function on site. X done
 
-3.write function which for bookings which shows who has booked which class.
-4. implement the function on site
-5. implement function showing which members have registered for which classes.
-6.write a method to show up coming classes
+
+5. use bookings save method to add functionality which allows members to be booked into classes.
+6. add edit functionality to members and classes
+7. implement function showing which members have registered for which classes.
+8.write a method to show up coming classes

@@ -32,3 +32,14 @@ post '/classes/:id/delete' do
   fclass.delete()
   redirect to '/classes'
 end
+
+get '/classes/:id/add-member' do
+  @members = Member.all()
+  @fclass = FitClass.find(params['id'])
+erb(:'classes/add')
+end
+
+post '/classes/:id' do
+  Booking.new(params).save
+  redirect to '/classes'
+end

@@ -1,0 +1,18 @@
+<form action="/classes/<%=@fclass.id %>" method="post">
+
+  <label for="member">Member Name:</label>
+  <select name="member_id" id = "member">
+    <% @members.each do |member| %>
+       <option value=<%= member.id %>><%= member.name.capitalize %></option>
+    <% end %>
+  </select>
+
+
+  <label for="class">Class:</label>
+  <select name="class_id" id = "class">
+       <option value=<%= @fclass.id %>><%= @fclass.type %></option>
+   </select>
+
+    <input type="submit" value="Register Member"/>
+
+</form>
