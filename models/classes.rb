@@ -70,4 +70,11 @@ def self.all()
   all_classes
 end
 
+def self.up_coming()
+sql = "SELECT classes.* FROM classes WHERE time > '13:00'"
+results = SqlRunner.run(sql)
+uc_class =results.map{|fclass| FitClass.new(fclass)}
+uc_class
+end
+
 end

@@ -7,3 +7,10 @@
 <% end %>
 
 <form action="/classes/new" method="GET"><input type="submit" value="Add Class"></form>
+
+<h2>Up-Coming Classes</h2>
+<% @upcoming.each do |upclass| %>
+
+<h3> <%= upclass.type %> : <%= upclass.time %> </h3>
+
+<% end %>

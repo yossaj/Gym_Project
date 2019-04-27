@@ -57,3 +57,4 @@ member1.update
 #  FitClass.find_by_type('Tabata')
 
 class3.who_registered_for_class
+p FitClass.up_coming()

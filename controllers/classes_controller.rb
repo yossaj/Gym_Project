@@ -8,8 +8,10 @@ also_reload( '../models/*' )
 
 get '/classes' do
   @classes = FitClass.all()
+  @upcoming = FitClass.up_coming()
     erb(:'classes/index')
 end
+
 
 get '/classes/new' do
   @classes = FitClass.all()

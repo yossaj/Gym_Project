@@ -4,8 +4,9 @@
 4. implement the function on site. X done
 5. use bookings save method to add functionality which allows members to be booked into classes. X done
 6. add edit functionality to members and classes X done
-7. fix registration problem (AGAIN).
-8. implement function showing which members have registered for which classes.
+7. fix registration problem (AGAIN). X done
+8. implement function showing which members have registered for which classes. x Done
+9. fix classes null problem X done
 
 
-9.write a method to show up coming classes
+10.write a method to show up coming classes
