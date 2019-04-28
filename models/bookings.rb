@@ -31,6 +31,10 @@ class Booking
     results.count
   end
 
+  def verify
+    check_capacity > how_many_attending_class
+  end
+
   def save
     sql = "INSERT INTO bookings( class_id, member_id )
           VALUES ($1, $2) RETURNING id"
@@ -58,6 +62,14 @@ end
     values = [id]
     result = SqlRunner.run(sql,values)
     booking = result.map{|booking| Booking.new(booking)}
+  end
+
+  def self.find_by_class(class_id)
+    sql = 'SELECT * FROM bookings WHERE class_id = $1'
+    values = [class_id]
+    result = SqlRunner.run(sql,values)
+    booking = result.map{|booking| Booking.new(booking)}
+    booking.first
   end
 
   def self.delete_all

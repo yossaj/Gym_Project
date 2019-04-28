@@ -41,14 +41,14 @@ booking5.save
 booking6 = Booking.new({'class_id'=>class1.id, 'member_id'=> member3.id})
 booking6.save
 
-booking7 = Booking.new({'class_id'=>class1.id, 'member_id'=> member4.id})
-booking7.cap_save
-
-booking8 = Booking.new({'class_id'=>class1.id, 'member_id'=> member5.id})
-booking8.cap_save
-
-booking8 = Booking.new({'class_id'=>class1.id, 'member_id'=> member6.id})
-p booking8.cap_save
+# booking7 = Booking.new({'class_id'=>class1.id, 'member_id'=> member4.id})
+# booking7.cap_save
+#
+# booking8 = Booking.new({'class_id'=>class1.id, 'member_id'=> member5.id})
+# booking8.cap_save
+#
+# booking8 = Booking.new({'class_id'=>class1.id, 'member_id'=> member6.id})
+# p booking8.cap_save
 
 
 class1.type = 'salsa'
@@ -60,9 +60,14 @@ member1.update()
 member1.registration_date = '19-02-2000'
 member1.update
 
-p booking1.check_capacity
-p booking1.how_many_attending_class
-p class1.who_registered_for_class.count
+shoe = Booking.find_by_class(class1.id)
+shoe
+p shoe.verify
+# p booking1.verify
+
+# p booking1.check_capacity
+# p booking1.how_many_attending_class
+# p class1.who_registered_for_class.count
 
 # class1.delete()
 # member1.delete()

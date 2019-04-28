@@ -52,10 +52,11 @@ end
 get '/classes/:id/add-member' do
   @members = Member.all()
   @fclass = FitClass.find(params['id'])
+  @booking = Booking.find_by_class(params['id'])
 erb(:'classes/add')
 end
 
 post '/bookings' do
-  Booking.new(params).save
+  Booking.new(params).cap_save
   redirect to '/classes'
 end

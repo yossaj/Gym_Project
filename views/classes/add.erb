@@ -1,3 +1,5 @@
+<% if @booking.verify  %>
+
 <form action="/bookings" method="post">
 
   <label for="member">Member Name:</label>
@@ -16,3 +18,6 @@
     <input type="submit" value="Register Member"/>
 
 </form>
+<% else %>
+<p>Sorry! This class is fully booked.
+<% end %>
