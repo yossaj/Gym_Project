@@ -13,7 +13,8 @@ CREATE TABLE members(
 CREATE TABLE classes(
   id SERIAL8 PRIMARY KEY,
   type VARCHAR(255),
-  time TIME(1)
+  time TIME(1),
+  capacity INT8
 );
 
 CREATE TABLE bookings(

@@ -7,11 +7,11 @@ Booking.delete_all
 FitClass.delete_all
 Member.delete_all
 
-class1 = FitClass.new({'type'=>'Tabata', 'time'=> '12:40'})
+class1 = FitClass.new({'type'=>'Tabata', 'time'=> '12:40', 'capacity' => '5'})
 class1.save
-class2 = FitClass.new({'type'=>'Tabata', 'time'=> '15:00'})
+class2 = FitClass.new({'type'=>'Judo', 'time'=> '22:00', 'capacity' => '5'})
 class2.save
-class3 = FitClass.new({'type'=>'Boxercise', 'time'=> '17:30'})
+class3 = FitClass.new({'type'=>'Boxercise', 'time'=> '17:30', 'capacity' => '5'})
 class3.save
 
 member1 = Member.new({'name'=>'Billy', 'membership_type'=> 'Standard', 'registration_date'=>'11-08-2009'} )

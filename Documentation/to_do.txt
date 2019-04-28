@@ -8,8 +8,12 @@
 8. implement function showing which members have registered for which classes. x Done
 9. fix classes null problem X done
 10.write a method to show up coming classes x Done
+11. improve spacing with css x Done
+12. layout ideas for additional functionality x Done
 
 
-11. improve spacing with css
-12. layout ideas for additional functionality
-13. 
+13. Add maximum capacity to classes.
+14. fix any problems it causes
+15. add rooms to bookings
+16. think about adding instructor to class or adding an instructor class?
+17. work on css/design

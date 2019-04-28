@@ -4,18 +4,19 @@ require('pry')
 class FitClass
 
   attr_reader  :id
-  attr_accessor :type, :time
+  attr_accessor :type, :time, :capacity
 
   def initialize(options)
     @id = options['id'].to_i
     @type = options['type']
     @time = options['time']
+    @capacity = options['capacity'].to_i
   end
 
 def save
-  sql = "INSERT INTO classes( type, time )
-        VALUES ($1, $2) RETURNING id"
-  values = [@type, @time]
+  sql = "INSERT INTO classes( type, time, capacity )
+        VALUES ($1, $2, $3) RETURNING id"
+  values = [@type, @time, @capacity]
   result = SqlRunner.run(sql, values)
   @id = result.first['id']
 end
@@ -27,9 +28,9 @@ def delete()
 end
 
 def update()
- sql = "UPDATE classes SET (type, time) = ($1, $2)
-        WHERE id = $3;"
- values = [@type, @time, @id]
+ sql = "UPDATE classes SET (type, time, capacity) = ($1, $2, $3)
+        WHERE id = $4;"
+ values = [@type, @time, @capacity, @id]
  SqlRunner.run(sql, values)
 end
 
