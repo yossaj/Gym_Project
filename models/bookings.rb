@@ -10,6 +10,27 @@ class Booking
     @member_id = options['member_id'].to_i
   end
 
+  def check_capacity
+    sql ="SELECT capacity
+          FROM bookings
+          JOIN classes on classes.id = bookings.class_id
+          WHERE class_id = $1;"
+    values = [@class_id]
+    result = SqlRunner.run(sql,values)
+    result.first['capacity'].to_i
+  end
+
+  def how_many_attending_class
+    sql = "SELECT members.*
+          FROM members
+          INNER JOIN bookings ON members.id = bookings.member_id
+          INNER JOIN classes ON classes.id = bookings.class_id
+          WHERE bookings.class_id = $1"
+    values = [@class_id]
+    results =  SqlRunner.run(sql, values)
+    results.count
+  end
+
   def save
     sql = "INSERT INTO bookings( class_id, member_id )
           VALUES ($1, $2) RETURNING id"
