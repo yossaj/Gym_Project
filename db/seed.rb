@@ -20,6 +20,12 @@ member2 = Member.new({'name'=>'Jess', 'membership_type'=> 'Standard', 'registrat
 member2.save()
 member3 = Member.new({'name'=>'Sean', 'membership_type'=> 'Standard', 'registration_date'=>'20-11-2016'} )
 member3.save()
+member4 = Member.new({'name'=>'Jenny', 'membership_type'=> 'Standard', 'registration_date'=>'20-02-2016'} )
+member4.save()
+member5 = Member.new({'name'=>'Jon', 'membership_type'=> 'Golden', 'registration_date'=>'20-12-2011'} )
+member5.save()
+member6 = Member.new({'name'=>'Natashia', 'membership_type'=> 'Golden', 'registration_date'=>'22-12-2013'} )
+member6.save()
 
 booking1 = Booking.new({'class_id'=>class1.id, 'member_id'=> member1.id})
 booking1.save
@@ -34,6 +40,16 @@ booking5 = Booking.new({'class_id'=>class1.id, 'member_id'=> member2.id})
 booking5.save
 booking6 = Booking.new({'class_id'=>class1.id, 'member_id'=> member3.id})
 booking6.save
+
+booking7 = Booking.new({'class_id'=>class1.id, 'member_id'=> member4.id})
+booking7.cap_save
+
+booking8 = Booking.new({'class_id'=>class1.id, 'member_id'=> member5.id})
+booking8.cap_save
+
+booking8 = Booking.new({'class_id'=>class1.id, 'member_id'=> member6.id})
+p booking8.cap_save
+
 
 class1.type = 'salsa'
 class1.update()

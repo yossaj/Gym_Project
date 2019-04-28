@@ -39,6 +39,14 @@ class Booking
     @id = result.first['id']
   end
 
+def cap_save
+  if (check_capacity > how_many_attending_class)
+    save
+  else
+    return false
+  end
+end
+
   def delete()
     sql = "DELETE FROM bookings WHERE id = $1"
     values = [@id]

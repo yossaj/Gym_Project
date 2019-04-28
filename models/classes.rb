@@ -34,6 +34,18 @@ def update()
  SqlRunner.run(sql, values)
 end
 
+
+def who_registered_for_class
+  sql = "SELECT members.*
+        FROM members
+        INNER JOIN bookings ON members.id = bookings.member_id
+        INNER JOIN classes ON classes.id = bookings.class_id
+        WHERE bookings.class_id = $1"
+  values = [@id]
+  results =  SqlRunner.run(sql, values)
+  attending = results.map{|member| Member.new(member)}
+end
+
 def self.find(fclass)
   sql = 'SELECT * FROM classes WHERE id = $1'
   values = [fclass]
@@ -46,17 +58,6 @@ sql =" SELECT * FROM classes WHERE type = $1"
 values = [type]
 result = SqlRunner.run(sql, values)
 fitclass = result.map{|fclass| FitClass.new(fclass)}
-end
-
-def who_registered_for_class
-  sql = "SELECT members.*
-        FROM members
-        INNER JOIN bookings ON members.id = bookings.member_id
-        INNER JOIN classes ON classes.id = bookings.class_id
-        WHERE bookings.class_id = $1"
-  values = [@id]
-  results =  SqlRunner.run(sql, values)
-  attending = results.map{|member| Member.new(member)}
 end
 
 def self.delete_all()
