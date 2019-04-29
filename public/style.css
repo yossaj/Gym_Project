@@ -55,8 +55,8 @@ li{
   background-color: #D6E2E7;
 }
 
-img{
-  width: 100px;
+.member_holder img{
+  height: 150px;
 
 }
 
@@ -87,4 +87,8 @@ a{
 
 a:hover{
   background-color:;
+}
+
+.hidie{
+  display: none;
 }

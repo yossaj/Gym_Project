@@ -22,9 +22,9 @@ member3 = Member.new({'name'=>'Sean', 'membership_type'=> 'Standard', 'registrat
 member3.save()
 member4 = Member.new({'name'=>'Jenny', 'membership_type'=> 'Standard', 'registration_date'=>'20-02-2016', 'pic_url' => '/images/tim.jpg'} )
 member4.save()
-member5 = Member.new({'name'=>'Jon', 'membership_type'=> 'Golden', 'registration_date'=>'20-12-2011', 'pic_url' => '/images/profile_holder.png'} )
+member5 = Member.new({'name'=>'Jon', 'membership_type'=> 'Golden', 'registration_date'=>'20-12-2011', 'pic_url' => '/images/harold.jpg'} )
 member5.save()
-member6 = Member.new({'name'=>'Natashia', 'membership_type'=> 'Golden', 'registration_date'=>'22-12-2013', 'pic_url' => 'images/profile_holder.png'} )
+member6 = Member.new({'name'=>'Natashia', 'membership_type'=> 'Golden', 'registration_date'=>'22-12-2013', 'pic_url' => 'images/sonya.png'} )
 member6.save()
 
 booking1 = Booking.new({'class_id'=>class1.id, 'member_id'=> member1.id})
