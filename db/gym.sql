@@ -7,7 +7,7 @@ CREATE TABLE members(
   id SERIAL8 PRIMARY KEY,
   name VARCHAR(255),
   registration_date VARCHAR(255),
-  membership_type VARCHAR(255)
+  membership_type VARCHAR(255),
 );
 
 CREATE TABLE classes(

@@ -1,10 +1,16 @@
 <h2>Our Members</h2>
+<div class="member_all">
+
 
 <% @members.each do |member| %>
+<div class="member_holder">
+<a href="/members/<%= member.id %>"> 
 
-<p><a href="/members/<%= member.id %>"> <%=member.name%></a></p>
+<img src="/images/profile_holder.png" alt="Profile_Picture">
+<p><%=member.name%></p>
 
-
+</a></div>
 <% end %>
+</div>
 
 <form action="/members/new" method="GET"><input type="submit" value="New Member"></form>

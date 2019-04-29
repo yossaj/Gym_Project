@@ -55,6 +55,23 @@ li{
   background-color: #D6E2E7;
 }
 
+img{
+  width: 100px;
+
+}
+
+.member_holder{
+  display: inline-block;
+  margin: 5px;
+}
+
+.member_all{
+  display: inline-block;
+}
+
+.members_list{
+  margin: 10px 20px;
+}
 
 
 p{
