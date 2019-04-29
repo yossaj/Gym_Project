@@ -1,7 +1,7 @@
 <h1>Bookings</h1>
 <% @bookings.each do |booking|  %>
 
-<p><a href="bookings/<%= booking['booking_id'] %>">Class: <%= booking['type'] %> <%= booking['time'] %> | Member: <%= booking['name'] %></a></p>
+<p><a href="bookings/<%= booking['booking_id'] %>">Class: <%= booking['type'] %> <%= booking['time'].slice(0..4) %> | Member: <%= booking['name'] %></a></p>
 <p></p>
 
 

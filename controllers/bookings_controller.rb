@@ -17,6 +17,11 @@ get '/bookings/:id' do
   @booking = Booking.find(params['id'])
   @temp = @booking.first.show_booking_by_name
   @show = @temp.first
-
   erb(:'bookings/show')
+end
+
+get '/bookings/:id/edit' do
+  @booking = Booking.find(params['id'])
+  @bookings = Booking.show_all_by_name
+  erb(:'bookings/edit')
 end

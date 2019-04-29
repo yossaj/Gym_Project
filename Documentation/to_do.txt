@@ -13,10 +13,9 @@
 13. Add maximum capacity to classes. x done
 14. change add member method to include capacity X done
 15. fix any problems it causes X done
+16. added edit booking functionality X done
+17. implement it on website x done
 
 
-16. added edit booking functionality
-17. implement it on website
-16. add rooms to bookings
-17. think about adding instructor to class or adding an instructor class?
-18. work on css/design
+18.work on css
+19. refactor get names for bookings

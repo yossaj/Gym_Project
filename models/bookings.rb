@@ -66,7 +66,8 @@ end
   end
 
   def show_booking_by_name
-    sql = "SELECT classes.*, members.*,bookings.id as booking_id
+    sql = "SELECT classes.*, members.*,bookings.id as booking_id,
+          bookings.class_id, bookings.member_id
           FROM members INNER JOIN bookings
           ON members.id = bookings.member_id
           INNER JOIN classes ON classes.id = bookings.class_id
@@ -75,6 +76,7 @@ end
     results = SqlRunner.run(sql,values)
     all_bookings = results.map
   end
+
 
   def self.find(id)
     sql = 'SELECT * FROM bookings WHERE id = $1'

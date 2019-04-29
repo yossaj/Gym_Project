@@ -1,0 +1,17 @@
+<form action="" method="post">
+
+  <label for="mem_type">Member:</label>
+    <select name="membership_type" id = "mem_type">
+    <% @bookings.each do |bookie| %>
+    <option value="bookie['member_id']"><%= bookie['name'] %></option>
+    <% end  %>
+    </select>
+
+  <label for="mem_type">Class:</label>
+    <select name="membership_type" id = "mem_type">
+      <% @bookings.each do |bookie| %>
+      <option value="<%= bookie['class_id'] %>"><%= bookie['type']%> | <%= bookie['time'] %></option>
+      <% end  %>
+    </select>
+  <input type="submit" value="Update"/>
+</form>

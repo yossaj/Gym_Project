@@ -1,9 +1,8 @@
+<h2>Booking</h2>
+
+<p><%= @show['name'] %> | <%= @show['type'] %> | <%= @show['time'].slice(0..4)%> </p>
 
 
-<%= @show['type'] %>
 
-
-
-<form action="/bookings" method="GET"><input type="submit" value="Add Booking"></form>
-<form action="/bookings" method="POST"><input type="submit" value="Delete"></form>
-<form action="/bookings" method="GET"><input type="submit" value="Edit"></form>
+<form action="/bookings/<%= @show['booking_id'] %>/delete" method="POST"><input type="submit" value="Delete"></form>
+<form action="/bookings/<%= @show['booking_id'] %>/edit" method="GET"><input type="submit" value="Edit"></form>
