@@ -2,7 +2,8 @@ require_relative('../db/sql_runner.rb')
 
 class Booking
 
-  attr_reader :class_id, :member_id, :id
+  attr_reader  :id
+  attr_accessor :class_id, :member_id
 
   def initialize(options)
     @id = options['id'].to_i
@@ -55,6 +56,20 @@ end
     sql = "DELETE FROM bookings WHERE id = $1"
     values = [@id]
     SqlRunner.run(sql,values)
+  end
+
+  def update
+    sql = "UPDATE bookings SET (class_id, member_id) = ($1, $2)
+           WHERE id = $3;"
+    values = [@class_id,@member_id, @id]
+    SqlRunner.run(sql, values)
+  end
+
+  def self.find(id)
+    sql = 'SELECT * FROM bookings WHERE id = $1'
+    values = [id]
+    result = SqlRunner.run(sql,values)
+    booking = result.map{|booking| Booking.new(booking)}
   end
 
   def self.find(id)

@@ -9,5 +9,11 @@ also_reload( '../models/*' )
 
 get '/bookings' do
   @bookings = Booking.show_all_by_name
+  @link = Booking.all
     erb(:'bookings/index')
+end
+
+get '/bookings/:id' do
+  @booking = Booking.find(params['id'])
+  erb(:'bookings/show')
 end

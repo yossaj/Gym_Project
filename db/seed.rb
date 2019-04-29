@@ -49,6 +49,11 @@ booking6.save
 #
 # booking8 = Booking.new({'class_id'=>class1.id, 'member_id'=> member6.id})
 # p booking8.cap_save
+ booking6.member_id = member6.id
+ booking6.update
+
+ booking6
+
 
 
 class1.type = 'salsa'
@@ -60,9 +65,10 @@ member1.update()
 member1.registration_date = '19-02-2000'
 member1.update
 
-shoe = Booking.find_by_class(class1.id)
-shoe
-p shoe.verify
+
+# shoe = Booking.find_by_class(class1.id)
+# shoe
+# shoe.verify
 # p booking1.verify
 
 # p booking1.check_capacity
@@ -78,7 +84,7 @@ p shoe.verify
 
  # Member.find(member1.id)
 # p FitClass.find(class2.id)
- # Booking.find(booking1.id)
+ # Booking.find(booking3.id)
  # Booking.show_all_by_name
 #
 #  Member.find_by_name('Sean')

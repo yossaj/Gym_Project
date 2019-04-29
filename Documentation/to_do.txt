@@ -11,9 +11,12 @@
 11. improve spacing with css x Done
 12. layout ideas for additional functionality x Done
 13. Add maximum capacity to classes. x done
+14. change add member method to include capacity X done
+15. fix any problems it causes X done
 
-14. change add member method to include capacity
-15. fix any problems it causes
+
+16. added edit booking functionality
+17. implement it on website
 16. add rooms to bookings
 17. think about adding instructor to class or adding an instructor class?
 18. work on css/design
