@@ -8,13 +8,15 @@ CREATE TABLE members(
   name VARCHAR(255),
   registration_date VARCHAR(255),
   membership_type VARCHAR(255),
+  pic_url VARCHAR(255)
 );
 
 CREATE TABLE classes(
   id SERIAL8 PRIMARY KEY,
   type VARCHAR(255),
   time TIME(1),
-  capacity INT8
+  capacity INT8,
+  tier VARCHAR(255)
 );
 
 CREATE TABLE bookings(

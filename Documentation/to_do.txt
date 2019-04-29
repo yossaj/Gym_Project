@@ -16,4 +16,8 @@
 16. added edit booking functionality X done
 17. implement it on website x done
 18.work on css x done - added pictures and divs
-19. refactor get names for bookings x done (decided it was subit to be able to edit a booking, remoced it)
+19. refactor get names for bookings x done (decided it was submit to be able to edit a booking, removed it)
+20. add date column x
+21. add pictures url x
+22. add levels to classes x
+23. fix resultant bugs x

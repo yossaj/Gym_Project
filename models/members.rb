@@ -4,27 +4,28 @@ require('pry')
 class Member
 
   attr_reader  :id
-  attr_accessor :name, :membership_type, :registration_date
+  attr_accessor :name, :membership_type, :registration_date, :pic_url
 
   def initialize(options)
     @id = options['id'].to_i
     @name = options['name']
     @membership_type = options['membership_type']
     @registration_date = options['registration_date']
+    @pic_url = options['pic_url']
   end
 
   def save
-    sql = "INSERT INTO members( name, membership_type, registration_date )
-          VALUES ($1, $2, $3) RETURNING id"
-    values = [@name, @membership_type, @registration_date]
+    sql = "INSERT INTO members( name, membership_type, registration_date, pic_url )
+          VALUES ($1, $2, $3, $4) RETURNING id"
+    values = [@name, @membership_type, @registration_date, @pic_url]
     result = SqlRunner.run(sql, values)
     @id = result.first['id']
   end
 
   def update()
-   sql = "UPDATE members SET (name, membership_type, registration_date) = ($1, $2, $3)
-          WHERE id = $4;"
-   values = [@name, @membership_type, @registration_date, @id]
+   sql = "UPDATE members SET (name, membership_type, registration_date, pic_url) = ($1, $2, $3, $4)
+          WHERE id = $5;"
+   values = [@name, @membership_type, @registration_date, @pic_url, @id]
    SqlRunner.run(sql, values)
   end
 

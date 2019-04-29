@@ -4,10 +4,11 @@
 
 <% @members.each do |member| %>
 <div class="member_holder">
-<a href="/members/<%= member.id %>"> 
+<a href="/members/<%= member.id %>">
 
-<img src="/images/profile_holder.png" alt="Profile_Picture">
+<img src="<%= member.pic_url %>" alt="Profile_Picture">
 <p><%=member.name%></p>
+
 
 </a></div>
 <% end %>
