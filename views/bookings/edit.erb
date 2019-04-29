@@ -2,15 +2,15 @@
 
   <label for="mem_type">Member:</label>
     <select name="membership_type" id = "mem_type">
-    <% @bookings.each do |bookie| %>
-    <option value="bookie['member_id']"><%= bookie['name'] %></option>
+    <% @bookings.each do |booking_ins| %>
+    <option value="<%= booking_ins.member_id %>"><%= booking_ins.member_n%></option>
     <% end  %>
     </select>
 
   <label for="mem_type">Class:</label>
     <select name="membership_type" id = "mem_type">
-      <% @bookings.each do |bookie| %>
-      <option value="<%= bookie['class_id'] %>"><%= bookie['type']%> | <%= bookie['time'] %></option>
+      <% @bookings.each do |booking_ins|%>
+      <option value="<%= booking_ins.class_id %>"><%=booking_ins.class_type %> </option>
       <% end  %>
     </select>
   <input type="submit" value="Update"/>

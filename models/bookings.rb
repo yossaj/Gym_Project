@@ -58,6 +58,25 @@ end
     SqlRunner.run(sql,values)
   end
 
+  def class_type
+    sql = "SELECT type FROM classes
+          JOIN bookings  ON classes.id = bookings.class_id
+          WHERE class_id = $1"
+    values = [@class_id]
+    result = SqlRunner.run(sql, values)
+    result.first['type']
+  end
+
+  def member_name
+    sql = "SELECT name FROM members
+          JOIN bookings  ON members.id = bookings.member_id
+          WHERE member_id = $1"
+    values = [@member_id]
+    result = SqlRunner.run(sql, values)
+    result.first['name']
+  end
+
+
   def update
     sql = "UPDATE bookings SET (class_id, member_id) = ($1, $2)
            WHERE id = $3;"
@@ -82,15 +101,11 @@ end
     sql = 'SELECT * FROM bookings WHERE id = $1'
     values = [id]
     result = SqlRunner.run(sql,values)
-    booking = result.map{|booking| Booking.new(booking)}.first
+    booking = result.map{|booking| Booking.new(booking)}
+    booking[0]
   end
 
-  def self.find(id)
-    sql = 'SELECT * FROM bookings WHERE id = $1'
-    values = [id]
-    result = SqlRunner.run(sql,values)
-    booking = result.map{|booking| Booking.new(booking)}
-  end
+
 
 
 

@@ -1,8 +1,7 @@
 <h2>Booking</h2>
 
-<p><%= @show['name'] %> | <%= @show['type'] %> | <%= @show['time'].slice(0..4)%> </p>
+<p><%= @booking.member_name %> | <%= @booking.class_type.capitalize %> </p>
 
 
 
-<form action="/bookings/<%= @show['booking_id'] %>/delete" method="POST"><input type="submit" value="Delete"></form>
-<form action="/bookings/<%= @show['booking_id'] %>/edit" method="GET"><input type="submit" value="Edit"></form>
+<form action="/bookings/<%=@booking.id %>/delete" method="POST"><input type="submit" value="Delete"></form>

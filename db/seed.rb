@@ -70,8 +70,11 @@ Booking.show_all_by_name
 # booking2.show_booking_by_name
 
 p booking = Booking.find(booking1.id)
-p new_book = booking.first.show_booking_by_name
-p new_book.first
+# p new_book = booking.first.show_booking_by_name
+# p new_book.first
+
+p booking.class_type
+# p booking4.member_name
 
 # try this in the controller
 

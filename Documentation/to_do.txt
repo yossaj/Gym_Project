@@ -15,7 +15,5 @@
 15. fix any problems it causes X done
 16. added edit booking functionality X done
 17. implement it on website x done
-
-
-18.work on css
-19. refactor get names for bookings
+18.work on css x done - added pictures and divs
+19. refactor get names for bookings x done (decided it was subit to be able to edit a booking, remoced it)
