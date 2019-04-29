@@ -65,11 +65,22 @@ end
     SqlRunner.run(sql, values)
   end
 
+  def show_booking_by_name
+    sql = "SELECT classes.*, members.*,bookings.id as booking_id
+          FROM members INNER JOIN bookings
+          ON members.id = bookings.member_id
+          INNER JOIN classes ON classes.id = bookings.class_id
+          WHERE bookings.id = $1"
+    values = [@id]
+    results = SqlRunner.run(sql,values)
+    all_bookings = results.map
+  end
+
   def self.find(id)
     sql = 'SELECT * FROM bookings WHERE id = $1'
     values = [id]
     result = SqlRunner.run(sql,values)
-    booking = result.map{|booking| Booking.new(booking)}
+    booking = result.map{|booking| Booking.new(booking)}.first
   end
 
   def self.find(id)
@@ -78,6 +89,8 @@ end
     result = SqlRunner.run(sql,values)
     booking = result.map{|booking| Booking.new(booking)}
   end
+
+
 
   def self.find_by_class(class_id)
     sql = 'SELECT * FROM bookings WHERE class_id = $1'
@@ -100,7 +113,7 @@ end
   end
 
   def self.show_all_by_name()
-    sql = "SELECT classes.*, members.*
+    sql = "SELECT classes.*, members.*,bookings.id as booking_id
           FROM members INNER JOIN bookings
           ON members.id = bookings.member_id
           INNER JOIN classes ON classes.id = bookings.class_id "

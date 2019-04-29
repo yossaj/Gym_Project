@@ -65,6 +65,16 @@ member1.update()
 member1.registration_date = '19-02-2000'
 member1.update
 
+Booking.show_all_by_name
+
+# booking2.show_booking_by_name
+
+booking = Booking.find(booking1.id)
+new_book = booking.first.show_booking_by_name
+p new_book.first
+
+# try this in the controller
+
 
 # shoe = Booking.find_by_class(class1.id)
 # shoe

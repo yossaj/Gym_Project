@@ -15,5 +15,8 @@ end
 
 get '/bookings/:id' do
   @booking = Booking.find(params['id'])
+  @temp = @booking.first.show_booking_by_name
+  @show = @temp.first
+
   erb(:'bookings/show')
 end
