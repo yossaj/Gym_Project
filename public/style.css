@@ -3,10 +3,52 @@
   padding: 0px;
 }
 
-body{
-  background-color:	#F4F5F4;
+
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+  'header header header header header header'
+  'menu main main main main main'
+  'menu main main main main main';
+  grid-gap: 0px;
+  background-color: #F3A712;
   color: #171A2C;
   font-family: serif;
+  padding: 0px;
+}
+
+.item1{
+  text-align:center;
+  margin: 0px;
+ }
+
+.item2{
+  background-color: #586683;
+  margin: 0px;
+  font-family: futura;
+}
+
+.item3{
+  text-align:  center;
+  color: #33658A;
+  font-family: futura;
+}
+
+
+header{
+  background-color: #29335C;
+  color: #F3A712;
+  padding: 20px;
+}
+
+header h1{
+  font-family: 'Alfa Slab One', cursive;
+  font-weight: normal;
+  font-size: 4em;
 }
 
 input[type=button], input[type=submit] {
@@ -21,22 +63,27 @@ input[type=button], input[type=submit] {
 }
 
 h1{
-  margin: 10px;
+  margin: 0px;
 }
 
 h2{
-  margin: 10px;
+
 }
 
 nav{
   background-color: #586683;
+  font-size: 1.5em;
+  margin: 10px;
+  padding: 10px;
+  text-decoration: none;
 }
 
 nav a{
   text-decoration: none;
   color: #F4F5F4;
   font-size: 1em;
-  padding:10px 5px;
+
+  padding: 10px;
 }
 
 nav a:hover{
@@ -45,8 +92,7 @@ nav a:hover{
 }
 
 li{
-  display: inline-block;
-  margin: 10px 5px;
+    margin: 10px;
 }
 
 .insert{
@@ -66,7 +112,7 @@ li{
 }
 
 .member_all{
-  display: inline-block;
+
 }
 
 .members_list{
@@ -76,13 +122,14 @@ li{
 
 p{
   font-size: 1.2em;
-  margin: 10px;
+  margin: 0px;
   padding: 5px;
 }
 
 a{
   text-decoration: none;
   color: #171A2C;
+  width: inherit;
 }
 
 a:hover{

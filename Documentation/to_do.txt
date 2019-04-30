@@ -30,7 +30,7 @@
 26. add date col to table X
 27. fix resultant bugs X
 28. add sort by date X
+30. select images X
 
 
-30. plan for random picture generating
-26. add to css
+29. add to css
