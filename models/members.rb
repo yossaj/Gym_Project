@@ -69,6 +69,13 @@ class Member
     all_mems
   end
 
+  def self.all_golden_members
+    sql = "SELECT * FROM members WHERE membership_type = 'Golden';"
+    results = SqlRunner.run(sql)
+    gold_mem = results.map{|member| Member.new(member)}
+    gold_mem
+  end
+
 
 
 end

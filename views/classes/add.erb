@@ -1,23 +1,47 @@
-<% if @booking.verify  %>
+<% if @booking.verify || nil %>
+    <%  if @fclass.tier == 'Golden' %>
 
-<form action="/bookings" method="post">
+    <form action="/bookings" method="post">
 
-  <label for="member">Member Name:</label>
-  <select name="member_id" id = "member">
-    <% @members.each do |member| %>
-       <option value=<%= member.id %>><%= member.name.capitalize %></option>
+      <label for="member">Member Name:</label>
+      <select name="member_id" id = "member">
+        <% @golden_members.each do |member| %>
+           <option value=<%= member.id %>><%= member.name.capitalize %></option>
+        <% end %>
+      </select>
+
+
+      <label for="class">Class:</label>
+      <select name="class_id" id = "class">
+           <option value=<%= @fclass.id %>><%= @fclass.type %></option>
+       </select>
+
+        <input type="submit" value="Register Member"/>
+
+    </form>
+
+    <% else %>
+
+    <form action="/bookings" method="post">
+
+      <label for="member">Member Name:</label>
+      <select name="member_id" id = "member">
+        <% @members.each do |member| %>
+           <option value=<%= member.id %>><%= member.name.capitalize %></option>
+        <% end %>
+      </select>
+
+
+      <label for="class">Class:</label>
+      <select name="class_id" id = "class">
+           <option value=<%= @fclass.id %>><%= @fclass.type %></option>
+       </select>
+
+        <input type="submit" value="Register Member"/>
+
+    </form>
+
     <% end %>
-  </select>
-
-
-  <label for="class">Class:</label>
-  <select name="class_id" id = "class">
-       <option value=<%= @fclass.id %>><%= @fclass.type %></option>
-   </select>
-
-    <input type="submit" value="Register Member"/>
-
-</form>
 <% else %>
 <p>Sorry! This class is fully booked.</p>
 <% end %>

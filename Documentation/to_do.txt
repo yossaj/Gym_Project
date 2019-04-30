@@ -21,3 +21,10 @@
 21. add pictures url x
 22. add levels to classes x
 23. fix resultant bugs x
+24. add images to show of each members x
+
+
+24. write function which checks membership_type vs tier
+25. write function which only saves a member to a class if they are a specific membership_type
+26. fix bugs
+27. add to css

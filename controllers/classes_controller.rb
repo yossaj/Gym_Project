@@ -51,6 +51,7 @@ end
 
 get '/classes/:id/add-member' do
   @members = Member.all()
+  @golden_members = Member.all_golden_members()
   @fclass = FitClass.find(params['id'])
   @booking = Booking.find_by_class(params['id'])
 erb(:'classes/add')
