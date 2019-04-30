@@ -18,7 +18,9 @@ class Booking
           JOIN classes on classes.id = bookings.class_id
           WHERE class_id = $1;"
     values = [@class_id]
+  
     result = SqlRunner.run(sql,values)
+    return 0 if result.first == nil
     result.first['capacity'].to_i
   end
 
