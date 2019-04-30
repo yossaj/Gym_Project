@@ -15,6 +15,7 @@ CREATE TABLE classes(
   id SERIAL8 PRIMARY KEY,
   type VARCHAR(255),
   time TIME(1),
+  date DATE,
   capacity INT8,
   tier VARCHAR(255)
 );

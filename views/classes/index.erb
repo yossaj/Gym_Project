@@ -2,13 +2,18 @@
 
 
 
-<h2>Up-Coming Classes</h2>
-
+<h2>What's on Today?</h2>
+<% if @upcoming != [] %>
 <% @upcoming.each do |upclass| %>
 <div class="members_list">
 <h3> <%= upclass.type %> : <%= upclass.time.slice(0..4) %> </h3>
 </div>
 <% end %>
+<% else %>
+<p>Sorry! There are no more classes today.</p>
+<% end  %>
+
+<h3><a href="/classes/calendar">See the rest of the week.</a></h3>
 
 </div>
 

@@ -5,12 +5,15 @@
   <label for="time">Time:</label>
   <input type="text" name="time" id="time" value="<%=@fclass.time %>">
 
+  <label for="date">Time:</label>
+  <input type="date" name="date" id="date" value="<%=@fclass.date %>">
+
   <label for="capacity">Capacity:</label>
-  <input type="number" name="capacity" id="capacity">
+  <input type="number" name="capacity" id="capacity" value="<%= @fclass.capacity %>">
 
   <label for="tier">Tier:</label>
-  <select name="tier" id = "">
-    <option value="Golden">Standard</option>
+  <select name="tier" id = "tier">
+    <option value="Standard">Standard</option>
     <option value="Golden">Golden</option>
   </select>
 

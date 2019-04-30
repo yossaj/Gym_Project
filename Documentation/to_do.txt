@@ -23,9 +23,14 @@
 23. fix resultant bugs x
 24. add images to show of each members x
 24. write function which checks membership_type vs tier x done
-24.2 fix verify so it accepts 'nil'
+24.2 fix verify so it accepts 'nil'  X
+24.3 fix cap_save so that it can save members to new classes  X
+24.4 added input boxes to edit X
+25. fix bugs  X
+26. add date col to table X
+27. fix resultant bugs X
+28. add sort by date X
 
-24.3 fix cap_save so that it can save members to new classes
-24.4 added input boxes to edit 
-25. fix bugs
+
+30. plan for random picture generating
 26. add to css

@@ -18,6 +18,11 @@ get '/classes/new' do
   erb(:'classes/new')
 end
 
+get '/classes/calendar' do
+  @upclasses = FitClass.up_coming_by_date
+  erb(:'classes/calendar')
+end
+
 post '/classes' do
   FitClass.new(params).save
   redirect to '/classes'

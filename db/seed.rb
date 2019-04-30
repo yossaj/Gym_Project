@@ -7,24 +7,24 @@ Booking.delete_all
 FitClass.delete_all
 Member.delete_all
 
-class1 = FitClass.new({'type'=>'Tabata', 'time'=> '12:40', 'capacity' => '5', 'tier' => 'standard'})
+class1 = FitClass.new({'type'=>'Tabata', 'time'=> '12:40', 'date' => '2019-04-29', 'capacity' => '5', 'tier' => 'standard'})
 class1.save
-class2 = FitClass.new({'type'=>'Judo', 'time'=> '22:00', 'capacity' => '6', 'tier' => 'standard'})
+class2 = FitClass.new({'type'=>'Judo', 'time'=> '22:00', 'date' => '2019-10-24', 'capacity' => '6', 'tier' => 'standard'})
 class2.save
-class3 = FitClass.new({'type'=>'Boxercise', 'time'=> '17:30', 'capacity' => '7', 'tier' => 'standard'})
+class3 = FitClass.new({'type'=>'Boxercise', 'time'=> '17:30', 'date' => '2019-04-29', 'capacity' => '7', 'tier' => 'standard'})
 class3.save
 
-member1 = Member.new({'name'=>'Billy', 'membership_type'=> 'Standard', 'registration_date'=>'11-08-2009', 'pic_url' => '/images/donald.jpg'} )
+member1 = Member.new({'name'=>'Billy', 'membership_type'=> 'Standard', 'registration_date'=>'11-08-2009', 'pic_url' => 'donald.jpg'} )
 member1.save()
-member2 = Member.new({'name'=>'Jess', 'membership_type'=> 'Standard', 'registration_date'=>'11-08-2011', 'pic_url' => '/images/tom.jpg'} )
+member2 = Member.new({'name'=>'Jess', 'membership_type'=> 'Standard', 'registration_date'=>'11-08-2011', 'pic_url' => 'tom.jpg'} )
 member2.save()
-member3 = Member.new({'name'=>'Sean', 'membership_type'=> 'Standard', 'registration_date'=>'20-11-2016', 'pic_url' => '/images/vicky.jpg'} )
+member3 = Member.new({'name'=>'Sean', 'membership_type'=> 'Standard', 'registration_date'=>'20-11-2016', 'pic_url' => 'vicky.jpg'} )
 member3.save()
-member4 = Member.new({'name'=>'Jenny', 'membership_type'=> 'Standard', 'registration_date'=>'20-02-2016', 'pic_url' => '/images/tim.jpg'} )
+member4 = Member.new({'name'=>'Jenny', 'membership_type'=> 'Standard', 'registration_date'=>'20-02-2016', 'pic_url' => 'tim.jpg'} )
 member4.save()
-member5 = Member.new({'name'=>'Jon', 'membership_type'=> 'Golden', 'registration_date'=>'20-12-2011', 'pic_url' => '/images/harold.jpg'} )
+member5 = Member.new({'name'=>'Jon', 'membership_type'=> 'Golden', 'registration_date'=>'20-12-2011', 'pic_url' => 'harold.jpg'} )
 member5.save()
-member6 = Member.new({'name'=>'Natashia', 'membership_type'=> 'Golden', 'registration_date'=>'22-12-2013', 'pic_url' => 'images/sonya.png'} )
+member6 = Member.new({'name'=>'Natashia', 'membership_type'=> 'Golden', 'registration_date'=>'22-12-2013', 'pic_url' => 'profile_holder.png'} )
 member6.save()
 
 booking1 = Booking.new({'class_id'=>class1.id, 'member_id'=> member1.id})
@@ -109,3 +109,5 @@ p booking.class_type
 # FitClass.up_coming()
 
 Member.all_golden_members
+
+p FitClass.up_coming

@@ -4,20 +4,21 @@ require('pry')
 class FitClass
 
   attr_reader  :id
-  attr_accessor :type, :time, :capacity, :tier
+  attr_accessor :type, :time, :date, :capacity, :tier
 
   def initialize(options)
     @id = options['id'].to_i
     @type = options['type']
     @time = options['time']
+    @date = options['date']
     @capacity = options['capacity'].to_i
     @tier = options['tier']
   end
 
 def save
-  sql = "INSERT INTO classes( type, time, capacity, tier )
-        VALUES ($1, $2, $3, $4) RETURNING id"
-  values = [@type, @time, @capacity, @tier]
+  sql = "INSERT INTO classes( type, time, date, capacity, tier )
+        VALUES ($1, $2, $3, $4, $5) RETURNING id"
+  values = [@type, @time, @date, @capacity, @tier]
   result = SqlRunner.run(sql, values)
   @id = result.first['id']
 end
@@ -29,9 +30,9 @@ def delete()
 end
 
 def update()
- sql = "UPDATE classes SET (type, time, capacity, tier) = ($1, $2, $3, $4)
-        WHERE id = $5;"
- values = [@type, @time, @capacity, @tier, @id]
+ sql = "UPDATE classes SET (type, time, date, capacity, tier) = ($1, $2, $3, $4, $5)
+        WHERE id = $6;"
+ values = [@type, @time, @date, @capacity, @tier, @id]
  SqlRunner.run(sql, values)
 end
 
@@ -76,10 +77,18 @@ def self.all()
 end
 
 def self.up_coming()
-sql = "SELECT classes.* FROM classes WHERE time > CURRENT_TIME"
+sql = "SELECT classes.* FROM classes WHERE time > CURRENT_TIME and date = CURRENT_DATE"
 results = SqlRunner.run(sql)
 uc_class =results.map{|fclass| FitClass.new(fclass)}
 uc_class
+end
+
+def self.up_coming_by_date
+  sql = "SELECT classes.* FROM classes
+        WHERE date >= CURRENT_DATE"
+  results = SqlRunner.run(sql)
+  ucd_class =results.map{|fclass| FitClass.new(fclass)}
+  ucd_class
 end
 
 
