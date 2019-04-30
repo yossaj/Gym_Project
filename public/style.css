@@ -30,6 +30,7 @@
   background-color: #586683;
   margin: 0px;
   font-family: futura;
+  text-align: center;
 }
 
 .item3{
@@ -38,17 +39,14 @@
   font-family: futura;
 }
 
-
-header{
-  background-color: #29335C;
-  color: #F3A712;
-  padding: 20px;
-}
-
-header h1{
-  font-family: 'Alfa Slab One', cursive;
-  font-weight: normal;
-  font-size: 4em;
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
 input[type=button], input[type=submit] {
@@ -62,6 +60,31 @@ input[type=button], input[type=submit] {
   cursor: pointer;
 }
 
+input[type=submit]:hover {
+  background-color: #29335C;
+}
+
+ body{
+   background-color: #29335C;
+ }
+
+header{
+  background-color: #29335C;
+  color: #F3A712;
+  padding: 20px;
+}
+
+header h1{
+  font-family: 'Alfa Slab One', cursive;
+  font-weight: normal;
+  font-size: 4em;
+}
+
+header img{
+
+}
+
+
 h1{
   margin: 0px;
 }
@@ -71,7 +94,6 @@ h2{
 }
 
 nav{
-  background-color: #586683;
   font-size: 1.5em;
   margin: 10px;
   padding: 10px;
@@ -81,14 +103,16 @@ nav{
 nav a{
   text-decoration: none;
   color: #F4F5F4;
-  font-size: 1em;
-
   padding: 10px;
+
 }
 
 nav a:hover{
   background-color: #336AAD;
-  padding: ;
+}
+
+ul {
+  list-style-type: none;
 }
 
 li{
@@ -99,6 +123,18 @@ li{
   margin: 30px;
   padding: 10px;
   background-color: #D6E2E7;
+}
+
+.insert h2{
+  margin: 15px;
+}
+
+.insert img{
+  width: 100px;
+}
+
+.insert h3{
+  margin: 10px;
 }
 
 .member_holder img{
