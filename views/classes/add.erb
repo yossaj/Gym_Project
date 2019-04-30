@@ -1,4 +1,4 @@
-<% if @booking.verify || nil %>
+<% if @booking == nil || @booking.verify %>
     <%  if @fclass.tier == 'Golden' %>
 
     <form action="/bookings" method="post">

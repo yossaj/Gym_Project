@@ -1,4 +1,5 @@
 require_relative('../db/sql_runner.rb')
+require('pry')
 
 class Booking
 
@@ -36,13 +37,7 @@ class Booking
     check_capacity > how_many_attending_class
   end
 
-  def get_membership_type
 
-  end
-
-  def comapre_membership_stat_to_tier
-
-  end
 
   def save
     sql = "INSERT INTO bookings( class_id, member_id )

@@ -108,4 +108,4 @@ p booking.class_type
 # class3.who_registered_for_class
 # FitClass.up_coming()
 
-p Member.all_golden_members
+Member.all_golden_members

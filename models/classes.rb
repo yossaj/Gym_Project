@@ -47,6 +47,8 @@ def who_registered_for_class
   attending = results.map{|member| Member.new(member)}
 end
 
+
+
 def self.find(fclass)
   sql = 'SELECT * FROM classes WHERE id = $1'
   values = [fclass]
@@ -79,5 +81,7 @@ results = SqlRunner.run(sql)
 uc_class =results.map{|fclass| FitClass.new(fclass)}
 uc_class
 end
+
+
 
 end
