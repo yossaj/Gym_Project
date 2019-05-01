@@ -113,3 +113,5 @@ booking6.save
 
 # member1.show_classes_for_member
 # p member6.show_classes_for_member.first
+
+p class1.date_as_day

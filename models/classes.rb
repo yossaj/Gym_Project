@@ -48,6 +48,10 @@ def who_registered_for_class
   attending = results.map{|member| Member.new(member)}
 end
 
+def date_as_day
+  as_day = Time.new(@date)
+  as_day.strftime("%A")
+end
 
 
 def self.find(fclass)
@@ -90,6 +94,8 @@ def self.up_coming_by_date
   ucd_class =results.map{|fclass| FitClass.new(fclass)}
   ucd_class
 end
+
+
 
 
 
