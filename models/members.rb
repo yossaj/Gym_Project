@@ -42,7 +42,7 @@ class Member
         WHERE member_id = $1"
     values =[@id]
     results =SqlRunner.run(sql,values)
-    classes = results.each{|result|FitClass.new(result)}
+    classes = results.map{|result|FitClass.new(result)}
     return classes
   end
 

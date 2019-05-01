@@ -23,6 +23,7 @@ end
 
 get '/members/:id' do
   @member = Member.find(params['id'])
+  @classes = @member.show_classes_for_member
   erb(:'members/show')
 end
 

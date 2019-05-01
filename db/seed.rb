@@ -108,9 +108,9 @@ booking.class_type
 # class3.who_registered_for_class
 # FitClass.up_coming()
 
-Member.all_golden_members
+# Member.all_golden_members
+#
+# FitClass.up_coming
 
-FitClass.up_coming
-
-member1.show_classes_for_member
-p member6.show_classes_for_member.first
+# member1.show_classes_for_member
+# p member6.show_classes_for_member.first

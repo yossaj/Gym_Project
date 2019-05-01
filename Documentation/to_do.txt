@@ -32,8 +32,8 @@
 28. add sort by date X
 30. select images X
 29. add to css x
+34. fix member update x
+32. add function which shows all classes a member will be attending x
 
 31. add photo to members shows
-32. add function which shows all classes a member will be attending
 33. add more links
-34. fix member update
