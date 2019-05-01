@@ -56,24 +56,23 @@ booking6.save
 
 
 
-class1.type = 'salsa'
-class1.update()
-
-member1.name = 'Jim'
-member1.update()
-
-member1.registration_date = '19-02-2000'
-member1.update
-
-Booking.show_all_by_name
-
-# booking2.show_booking_by_name
-
-booking = Booking.find(booking1.id)
+# class1.type = 'salsa'
+# class1.update()
+#
+# member1.name = 'Jim'
+# member1.update()
+#
+# member1.registration_date = '19-02-2000'
+# member1.update
+#
+# Booking.show_all_by_name
+#
+# # booking2.show_booking_by_name
+#
+# booking = Booking.find(booking1.id)
 # p new_book = booking.first.show_booking_by_name
 # p new_book.first
 
-booking.class_type
 # p booking4.member_name
 
 # try this in the controller

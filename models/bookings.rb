@@ -18,7 +18,7 @@ class Booking
           JOIN classes on classes.id = bookings.class_id
           WHERE class_id = $1;"
     values = [@class_id]
-  
+
     result = SqlRunner.run(sql,values)
     return 0 if result.first == nil
     result.first['capacity'].to_i
@@ -72,6 +72,12 @@ end
     result.first['type']
   end
 
+  def all_classes
+    sql = "SELECT * FROM classes"
+    results = SqlRunner.run(sql)
+    classes = results.map{|fclass|FitClass.new(fclass)}
+  end
+
   def member_name
     sql = "SELECT name FROM members
           JOIN bookings  ON members.id = bookings.member_id
@@ -109,9 +115,6 @@ end
     booking = result.map{|booking| Booking.new(booking)}
     booking[0]
   end
-
-
-
 
 
   def self.find_by_class(class_id)

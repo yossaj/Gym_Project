@@ -19,9 +19,15 @@ get '/bookings/:id' do
 end
 
 get '/bookings/:id/edit' do
-  @bookings = Booking.all
   @booking = Booking.find(params['id'])
+  @classes = @booking.all_classes
   erb(:'bookings/edit')
+end
+
+post '/bookings/:id' do
+  booking = Booking.new(params)
+  booking.update
+  redirect to '/bookings'
 end
 
 post '/bookings/:id/delete' do

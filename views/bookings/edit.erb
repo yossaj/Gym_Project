@@ -1,16 +1,14 @@
-<form action="" method="post">
+<form action="/bookings/<%=@booking.id %>" method="post">
 
-  <label for="mem_type">Member:</label>
-    <select name="membership_type" id = "mem_type">
-    <% @bookings.each do |booking_ins| %>
-    <option value="<%= booking_ins.member_id %>"><%= booking_ins.member_n%></option>
-    <% end  %>
+  <label for="mem_id">Member:</label>
+    <select name="member_id" id = "mem_id">
+    <option value="<%= @booking.member_id %>"><%= @booking.member_name%></option>
     </select>
 
-  <label for="mem_type">Class:</label>
-    <select name="membership_type" id = "mem_type">
-      <% @bookings.each do |booking_ins|%>
-      <option value="<%= booking_ins.class_id %>"><%=booking_ins.class_type %> </option>
+  <label for="fclass">Class:</label>
+    <select name="class_id" id = "fclass">
+      <% @classes.each do |fclass|%>
+      <option value="<%= fclass.id %>"><%=fclass.type %> </option>
       <% end  %>
     </select>
   <input type="submit" value="Update"/>
