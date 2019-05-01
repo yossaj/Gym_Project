@@ -50,9 +50,10 @@ class Booking
   end
 
 def cap_save
-  if (check_capacity > how_many_attending_class)
+  if how_many_attending_class == 0 || (check_capacity > how_many_attending_class)
     save
   else
+
     return false
   end
 end
