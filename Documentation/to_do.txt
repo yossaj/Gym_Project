@@ -36,3 +36,4 @@
 31. add photo to members shows
 32. add function which shows all classes a member will be attending
 33. add more links
+34. fix member update

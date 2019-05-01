@@ -1,4 +1,5 @@
 require_relative('../db/sql_runner.rb')
+require_relative('classes.rb')
 require('pry')
 
 class Member
@@ -33,6 +34,16 @@ class Member
     sql = "DELETE FROM members WHERE id = $1"
     values = [@id]
     SqlRunner.run(sql,values)
+  end
+
+  def show_classes_for_member
+    sql ="SELECT classes.* FROM classes
+        JOIN bookings ON classes.id = bookings.class_id
+        WHERE member_id = $1"
+    values =[@id]
+    results =SqlRunner.run(sql,values)
+    classes = results.each{|result|FitClass.new(result)}
+    return classes
   end
 
   def self.find(member)
@@ -75,6 +86,7 @@ class Member
     gold_mem = results.map{|member| Member.new(member)}
     gold_mem
   end
+
 
 
 

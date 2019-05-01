@@ -49,10 +49,10 @@ booking6.save
 #
 # booking8 = Booking.new({'class_id'=>class1.id, 'member_id'=> member6.id})
 # p booking8.cap_save
- booking6.member_id = member6.id
- booking6.update
-
- booking6
+ # booking6.member_id = member6.id
+ # booking6.update
+ #
+ # booking6
 
 
 
@@ -69,11 +69,11 @@ Booking.show_all_by_name
 
 # booking2.show_booking_by_name
 
-p booking = Booking.find(booking1.id)
+booking = Booking.find(booking1.id)
 # p new_book = booking.first.show_booking_by_name
 # p new_book.first
 
-p booking.class_type
+booking.class_type
 # p booking4.member_name
 
 # try this in the controller
@@ -110,4 +110,7 @@ p booking.class_type
 
 Member.all_golden_members
 
-p FitClass.up_coming
+FitClass.up_coming
+
+member1.show_classes_for_member
+p member6.show_classes_for_member.first
