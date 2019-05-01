@@ -48,9 +48,20 @@ def who_registered_for_class
   attending = results.map{|member| Member.new(member)}
 end
 
+def convert_date
+  @date.split('-')
+end
+
 def date_as_day
-  as_day = Time.new(@date)
-  as_day.strftime("%A")
+  date_array = convert_date
+  as_day = Time.new(date_array[0],date_array[1], date_array[2])
+  as_day.strftime("%A,")
+end
+
+def date_as_written
+  date_array = convert_date
+  as_day = Time.new(date_array[0],date_array[1], date_array[2])
+  as_day.strftime("%A, %d of %B, %Y")
 end
 
 
@@ -80,6 +91,7 @@ def self.all()
   all_classes
 end
 
+
 def self.up_coming()
 sql = "SELECT classes.* FROM classes WHERE time > CURRENT_TIME and date = CURRENT_DATE"
 results = SqlRunner.run(sql)
@@ -87,9 +99,19 @@ uc_class =results.map{|fclass| FitClass.new(fclass)}
 uc_class
 end
 
+def self.up_coming_by_date_seven
+  sql = "SELECT classes.* FROM classes
+        WHERE date >= CURRENT_DATE AND date < CURRENT_DATE + 7
+        ORDER BY date ASC"
+  results = SqlRunner.run(sql)
+  ucd_class =results.map{|fclass| FitClass.new(fclass)}
+  ucd_class
+end
+
 def self.up_coming_by_date
   sql = "SELECT classes.* FROM classes
-        WHERE date >= CURRENT_DATE"
+        WHERE date >= CURRENT_DATE
+        ORDER BY date ASC"
   results = SqlRunner.run(sql)
   ucd_class =results.map{|fclass| FitClass.new(fclass)}
   ucd_class

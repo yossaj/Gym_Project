@@ -19,7 +19,8 @@ get '/classes/new' do
 end
 
 get '/classes/calendar' do
-  @upclasses = FitClass.up_coming_by_date
+  @upseven = FitClass.up_coming_by_date_seven
+  @all_upcoming = FitClass.up_coming_by_date
   erb(:'classes/calendar')
 end
 
@@ -61,6 +62,7 @@ get '/classes/:id/add-member' do
   @booking = Booking.find_by_class(params['id'])
 erb(:'classes/add')
 end
+
 
 post '/bookings' do
   Booking.new(params).cap_save

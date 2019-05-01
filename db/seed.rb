@@ -7,11 +7,11 @@ Booking.delete_all
 FitClass.delete_all
 Member.delete_all
 
-class1 = FitClass.new({'type'=>'Tabata', 'time'=> '12:40', 'date' => '2019-04-29', 'capacity' => '5', 'tier' => 'standard'})
+class1 = FitClass.new({'type'=>'Tabata', 'time'=> '12:40', 'date' => '2019-05-06', 'capacity' => '5', 'tier' => 'standard'})
 class1.save
-class2 = FitClass.new({'type'=>'Judo', 'time'=> '22:00', 'date' => '2019-10-24', 'capacity' => '6', 'tier' => 'standard'})
+class2 = FitClass.new({'type'=>'Judo', 'time'=> '22:00', 'date' => '2019-05-03', 'capacity' => '6', 'tier' => 'standard'})
 class2.save
-class3 = FitClass.new({'type'=>'Boxercise', 'time'=> '17:30', 'date' => '2019-04-29', 'capacity' => '7', 'tier' => 'standard'})
+class3 = FitClass.new({'type'=>'Boxercise', 'time'=> '17:30', 'date' => '2019-05-27', 'capacity' => '7', 'tier' => 'standard'})
 class3.save
 
 member1 = Member.new({'name'=>'Billy', 'membership_type'=> 'Standard', 'registration_date'=>'11-08-2009', 'pic_url' => 'donald.jpg'} )
@@ -114,4 +114,15 @@ booking6.save
 # member1.show_classes_for_member
 # p member6.show_classes_for_member.first
 
-p class1.date_as_day
+# p class1.date_as_day
+# p class2.date_as_day
+# p class3.date_as_day
+#
+# p class1.date_as_written
+# p class2.date_as_written
+# p class3.date_as_written
+
+num = ('20190501')
+p num.to_i
+as_day = Time.new(2019, 05, 01)
+p as_day.strftime('%A')
