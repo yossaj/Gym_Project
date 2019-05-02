@@ -55,7 +55,7 @@ end
 def date_as_day
   date_array = convert_date
   as_day = Time.new(date_array[0],date_array[1], date_array[2])
-  as_day.strftime("%A,")
+  as_day.strftime("%A")
 end
 
 def date_as_written

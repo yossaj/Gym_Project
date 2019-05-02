@@ -22,7 +22,7 @@
 
 <% @classes.each do |fclass| %>
 
-<p>Class: <a href="/classes/<%= fclass.id %>"> <%=fclass.type%></a></p>
+<p> <a href="/classes/<%= fclass.id %>"> <%=fclass.type%></a>  |  <%= fclass.time.slice(0..4) %>  |  <%= fclass.tier.capitalize %> | <%= fclass.date_as_day %></p>
 
 <% end %>
 

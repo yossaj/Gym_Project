@@ -1,12 +1,16 @@
 <h2>Class: <%= @class.type %></h2>
 
 <h2>Time: <%= @class.time %></h2>
+<h2><%= @class.tier %></h2>
 
 <h3>Attending</h3>
 <% members = @class.who_registered_for_class %>
   <% members.each do |member| %>
-  <p><%= member.name %></p>
+  <div class="member_holder">
 
+  <img src="/images/<%= member.pic_url %>" alt="">
+  <p><%= member.name %></p>
+  </div>
     <% end %>
 
 <form action="/classes/<%= @class.id %>/add-member" method="GET"><input type="submit" value="Add Member"></form>

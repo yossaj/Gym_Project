@@ -8,9 +8,9 @@
   </tr>
   <% @upseven.each do |upclass| %>
   <tr>
-    <td><a href="#"><%= upclass.type %></a></td>
-    <td><a href="#"><%= upclass.time %></a></td>
-    <td><a href="#"><%= upclass.date_as_written%></a></td>
+    <td><a href="/classes/<%=upclass.id%>"><%= upclass.type %></a></td>
+    <td><a href="/classes/<%=upclass.id%>"><%= upclass.time %></a></td>
+    <td><a href="/classes/<%=upclass.id%>"><%= upclass.date_as_written%></a></td>
   </tr>
   <% end %>
   </table>
@@ -26,9 +26,9 @@
     </tr>
     <% @all_upcoming.each do |upclass| %>
     <tr>
-      <td><a href="#"><%= upclass.type %></a></td>
-      <td><a href="#"><%= upclass.time %></a></td>
-      <td><a href="#"><%= upclass.date_as_written%></a></td>
+      <td><a href="/classes/<%=upclass.id%>"><%= upclass.type %></a></td>
+      <td><a href="/classes/<%=upclass.id%>"><%= upclass.time %></a></td>
+      <td><a href="/classes/<%=upclass.id%>"><%= upclass.date_as_written%></a></td>
     </tr>
     <% end %>
     </table>

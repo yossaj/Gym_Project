@@ -10,6 +10,7 @@ also_reload( '../models/*' )
 get '/bookings' do
   @bookings = Booking.show_all_by_name
   @link = Booking.all
+  @find = 
     erb(:'bookings/index')
 end
 
