@@ -30,7 +30,6 @@
   background-color: #586683;
   margin: 0px;
   font-family: futura;
-  text-align: center;
 }
 
 .item3{
@@ -39,34 +38,6 @@
   font-family: futura;
 }
 
-input[type=text], select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-input[type=button], input[type=submit] {
-  background-color: #336AAD;
-  border: none;
-  color: white;
-  padding: 10px 15px;
-  text-decoration: none;
-  font-size: 1em;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-
-input[type=submit]:hover {
-  background-color: #29335C;
-}
-
- body{
-   background-color: #29335C;
- }
 
 header{
   background-color: #29335C;
@@ -80,8 +51,20 @@ header h1{
   font-size: 4em;
 }
 
+<<<<<<< HEAD
 
-
+=======
+input[type=button], input[type=submit] {
+  background-color: #336AAD;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 1em;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+>>>>>>> parent of b5b54fb... changes to css
 
 h1{
   margin: 0px;
@@ -92,6 +75,7 @@ h2{
 }
 
 nav{
+  background-color: #586683;
   font-size: 1.5em;
   margin: 10px;
   padding: 10px;
@@ -101,16 +85,14 @@ nav{
 nav a{
   text-decoration: none;
   color: #F4F5F4;
-  padding: 10px;
+  font-size: 1em;
 
+  padding: 10px;
 }
 
 nav a:hover{
   background-color: #336AAD;
-}
-
-ul {
-  list-style-type: none;
+  padding: ;
 }
 
 li{
@@ -121,18 +103,6 @@ li{
   margin: 30px;
   padding: 10px;
   background-color: #D6E2E7;
-}
-
-.insert h2{
-  margin: 15px;
-}
-
-.insert img{
-  width: 100px;
-}
-
-.insert h3{
-  margin: 10px;
 }
 
 .member_holder img{

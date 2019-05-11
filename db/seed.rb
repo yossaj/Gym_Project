@@ -1,6 +1,7 @@
 require_relative( '../models/classes' )
 require_relative( '../models/members' )
 require_relative( '../models/bookings' )
+require('pg')
 
 
 Booking.delete_all

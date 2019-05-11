@@ -31,6 +31,7 @@
 27. fix resultant bugs X
 28. add sort by date X
 30. select images X
+<<<<<<< HEAD
 29. add to css x
 34. fix member update x
 32. add function which shows all classes a member will be attending x
@@ -39,3 +40,8 @@
 31. add photo to members shows
 33. add more links
 35. fix add member to empty class problem
+=======
+
+
+29. add to css
+>>>>>>> parent of b5b54fb... changes to css
