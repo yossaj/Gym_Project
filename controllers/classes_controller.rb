@@ -1,4 +1,5 @@
 require( 'sinatra' )
+require('pg')
 # require( 'sinatra/contrib/all' )
 # require( 'pry-byebug' )
 require_relative( '../models/bookings.rb' )

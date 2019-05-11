@@ -1,4 +1,5 @@
 require( 'sinatra' )
+require('pg')
 # require( 'sinatra/contrib/all' )
 # require( 'pry-byebug' )
 require_relative( '../models/bookings.rb' )
@@ -10,7 +11,6 @@ require_relative( '../models/members.rb' )
 get '/bookings' do
   @bookings = Booking.show_all_by_name
   @link = Booking.all
-  @find =
     erb(:'bookings/index')
 end
 
