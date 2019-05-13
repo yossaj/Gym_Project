@@ -1,6 +1,7 @@
 <h2>Name: <%= @member.name %></h2>
-<img src="/images/<%= @member.pic_url %>" alt="" class="member_holder">
-
+<div class="member_holder">
+<img src="/images/<%= @member.pic_url %>" alt="member-photo" >
+</div>
 <h2>Membership Type: <%= @member.membership_type %></h2>
 <h2>Registration Date: <%= @member.registration_date %></h2>
 
