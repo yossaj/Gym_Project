@@ -11,7 +11,7 @@ The project can be accessed on Heroku: https://keelers-gym.herokuapp.com/
 
 ## About the Project and Future Improvements
 
-This project was made as part of the CodeClan course. I had a great time building it and as it was the first project I made helped me learn alot about what it takes to build a full-stack App from the ground up. 
+This project was made as part of the CodeClan course. I had a great time building it and learn alot about what it takes to build a full-stack App from the ground up. It was my first full-stack app.
 
 I plan to come back to it sometimes soon in order to improve it. Objectives for the next sprint:
     1. Refactor.
